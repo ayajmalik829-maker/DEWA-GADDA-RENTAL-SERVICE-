@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dewa Gadda Rental Service</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float { animation: float 3s ease-in-out infinite; }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-bg {
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+}
+
+.nav-link::after {
+  content:'';
+  display:block;
+  height:3px;
+  width:0;
+  background:#22c55e;
+  transition:.4s;
+}
+.nav-link:hover::after { width:100%; }
+
+.card3d { transition: .6s; }
+.card3d:hover {
+  transform: perspective(1200px) rotateY(10deg) scale(1.08);
+}
+
+.star { transition: color .2s ease; }
+</style>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 w-full z-50 animated-bg bg-gradient-to-r from-black via-green-900 to-black shadow-xl">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+
+    <div class="flex items-center gap-3">
+      <img src="ayaj.png" class="w-14 h-14 rounded-full border-4 border-green-400 float">
+      <span class="text-2xl font-bold text-white">Dewa Gadda</span>
+    </div>
+
+    <nav class="hidden md:flex gap-6 text-white font-semibold">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="hidden md:flex gap-3">
+      <a href="tel:8303756033" class="bg-yellow-400 px-5 py-2 rounded font-bold">Book Now</a>
+      <a href="https://wa.me/918303756033" class="bg-green-500 px-4 py-2 rounded text-white">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <button id="hamburgerBtn" class="md:hidden text-white text-3xl">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden bg-black text-white px-6 pb-4">
+    <a href="#home" class="block py-2">Home</a>
+    <a href="#services" class="block py-2">Services</a>
+    <a href="#contact" class="block py-2">Contact</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="pt-32 min-h-screen bg-gradient-to-br from-black to-green-900 text-white flex items-center">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl font-bold">
+        Premium <span class="text-yellow-400">Gadda Rental</span><br>Service
+      </h1>
+      <p class="mt-4 text-gray-300">
+        Clean • Comfortable • Affordable<br>
+        Near <b>Haji Waris Ali Sah Ki Dargah</b>
+      </p>
+    </div>
+
+    <div>
+      <img src="banner.jpg" class="rounded-xl shadow-2xl card3d w-full">
+      <div class="flex justify-center mt-5">
+        <a href="tel:8303756033" class="bg-yellow-400 px-8 py-3 rounded font-bold text-black">
+          Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+
+  <section id="contact" class="py-16 sm:py-20 bg-gray-100">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-10">Our Location</h2>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <iframe class="w-full h-72 sm:h-96 rounded-xl shadow"
+      src="https://www.google.com/maps?q=Haji+Waris+Ali+Sah+Ki+Dargah&output=embed"></iframe>
+  </div>
+</section>
+
+<!-- ================= ITEMS ================= -->
+<section class="py-16 animated-bg bg-gradient-to-r from-green-900 to-black text-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <img src="gadda.png" class="rounded-xl shadow-2xl card3d">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Gadda – ₹20 / day</h2>
+      <ul class="space-y-2">
+        <li>✔ Extra thick & soft</li>
+        <li>✔ Daily cleaned</li>
+        <li>✔ Best for guests</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 animated-bg bg-gradient-to-r from-black to-green-800 text-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Takiya – ₹7 / day</h2>
+      <ul class="space-y-2">
+        <li>✔ Neck support</li>
+        <li>✔ Soft filling</li>
+        <li>✔ Cozy sleep</li>
+      </ul>
+    </div>
+    <img src="pillo.jpg" class="rounded-xl shadow-2xl card3d">
+  </div>
+</section>
+
+<section class="py-16 animated-bg bg-gradient-to-r from-green-900 to-black text-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <img src="bedsheet.jpg" class="rounded-xl shadow-2xl card3d">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Chadar – ₹20 / day</h2>
+      <ul class="space-y-2">
+        <li>✔ Cotton fabric</li>
+        <li>✔ Sanitized</li>
+        <li>✔ All season</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 animated-bg bg-gradient-to-r from-black to-green-800 text-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Blanket – ₹30 / day</h2>
+      <ul class="space-y-2">
+        <li>✔ Warm & cozy</li>
+        <li>✔ Clean fabric</li>
+        <li>✔ Winter comfort</li>
+      </ul>
+    </div>
+    <img src="blanket.jpg" class="rounded-xl shadow-2xl card3d">
+  </div>
+</section>
+
+<!-- ================= REVIEWS + STAR RATING ================= -->
+<section class="py-16 bg-gray-100">
+  <h2 class="text-3xl font-bold text-center mb-6">Leave a Review</h2>
+
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow mb-6">
+    <input id="reviewName" type="text" placeholder="Your Name" class="w-full mb-4 p-3 border rounded">
+    <textarea id="reviewText" placeholder="Your Review" class="w-full mb-4 p-3 border rounded"></textarea>
+
+
+    <!-- STAR RATING -->
+    <div class="flex justify-center mb-4 text-3xl" id="starRating">
+      <i class="fas fa-star star cursor-pointer text-gray-400"></i>
+      <i class="fas fa-star star cursor-pointer text-gray-400"></i>
+      <i class="fas fa-star star cursor-pointer text-gray-400"></i>
+      <i class="fas fa-star star cursor-pointer text-gray-400"></i>
+      <i class="fas fa-star star cursor-pointer text-gray-400"></i>
+    </div>
+
+  
+
+    <button type="button" onclick="addReview()"
+      class="w-full bg-green-600 text-white py-3 rounded font-bold">
+      Submit Review
+    </button>
+  </div>
+
+  <div id="reviewsList" class="max-w-3xl mx-auto px-4 space-y-4"></div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="animated-bg bg-gradient-to-r from-black via-green-900 to-black text-gray-300 pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+
+    <div>
+      <h3 class="text-white font-bold mb-2">Why Choose Us?</h3>
+      <p>✔ Trusted near Dargah</p>
+      <p>✔ Clean & Affordable</p>
+    </div>
+
+    <div>
+      <h3 class="text-white font-bold mb-2">Contact</h3>
+      <p><i class="fas fa-phone text-green-400"></i> 8303756033</p>
+
+      <div class="mt-4 flex justify-center md:justify-start gap-4 text-2xl">
+        <a href="#" class="hover:text-green-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/918303756033" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:8303756033" class="hover:text-green-400"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-white font-bold mb-2">Service Promise</h3>
+      <p>✔ Comfort you can trust</p>
+      <p>✔ Premium quality</p>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-6 text-sm">© 2026 Dewa Gadda Rental Service</p>
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+document.getElementById("hamburgerBtn").onclick = () => {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+};
+
+let selectedRating = 0;
+const stars = document.querySelectorAll("#starRating .star");
+
+stars.forEach((star, index) => {
+  star.addEventListener("click", () => {
+    selectedRating = index + 1;
+    stars.forEach(s => s.classList.remove("text-yellow-400"));
+    for (let i = 0; i < selectedRating; i++) {
+      stars[i].classList.add("text-yellow-400");
+    }
+  });
+});
+
+function addReview() {
+  const name = reviewName.value.trim();
+  const text = reviewText.value.trim();
+
+  if (!name || !text || selectedRating === 0) {
+    alert("Please fill all fields and select rating");
+    return;
+  }
+
+  let starsHTML = "";
+  for (let i = 0; i < selectedRating; i++) {
+    starsHTML += `<i class="fas fa-star text-yellow-400"></i>`;
+  }
+
+  const div = document.createElement("div");
+  div.className = "bg-white p-4 rounded shadow border-l-4 border-green-500";
+  div.innerHTML = `
+    <h4 class="font-bold text-green-700">${name}</h4>
+    <div class="mb-1">${starsHTML}</div>
+    <p>${text}</p>
+  `;
+  reviewsList.prepend(div);
+
+  reviewName.value = "";
+  reviewText.value = "";
+  selectedRating = 0;
+  stars.forEach(s => s.classList.remove("text-yellow-400"));
+}
+</script>
+
+</body>
+</html>
